@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>table 심화</title>
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+      caption {
+        caption-side: top;
+        font-weight: bold;
+        font-size: 1.2em;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <caption>
+        구매 내역
+      </caption>
+      <thead>
+        <tr>
+          <th id="purchase">구매 항목</th>
+          <th id="location">장소</th>
+          <th id="date">날짜</th>
+          <th id="color">색상</th>
+          <th id="cost">비용</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th id="mac">맥북</th>
+          <td headers="location mac">가로수길 애플스토어</td>
+          <td headers="date mac">12/09</td>
+          <td headers="color mac">실버</td>
+          <td headers="cost mac">1,900,000</td>
+        </tr>
+        <tr>
+          <th id="iphone">아이폰</th>
+          <td headers="location iphone">가로수길 애플스토어</td>
+          <td headers="date iphone">01/11</td>
+          <td headers="color iphone">실버</td>
+          <td headers="cost iphone">1,560,000</td>
+        </tr>
+        <tr>
+          <th id="noodle">소면</th>
+          <td headers="location noodle">홈플러스 병점</td>
+          <td headers="date noodle">11/08</td>
+          <td headers="color noodle">&nbsp;</td>
+          <td headers="cost noodle">12,000</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
