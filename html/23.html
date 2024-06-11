@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form 모달 실습</title>
+    <style>
+      input,
+      button {
+        display: block;
+      }
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <header>
+        <p>로그인 또는 회원가입</p>
+        <button>
+          <img src="./src/close.png" alt="" />
+          <span class="sr-only">닫기 버튼</span>
+        </button>
+      </header>
+      <section>
+        <p>위니브에서 여러분의 궁금증을 해결하세요! :)</p>
+        <form>
+          <input type="text" name="id" id="id" placeholder="아이디" />
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="비밀번호"
+          />
+          <div style="display: flex">
+            <input type="checkbox" name="checkbox" id="keepLogin" />
+            <label for="keepLogin">로그인 상태 유지</label>
+          </div>
+          <input type="submit" value="로그인" />
+        </form>
+      </section>
+      <div>
+        <a href="#">회원가입</a>
+        <span> | </span>
+        <a href="#">아이디/비밀번호 찾기</a>
+      </div>
+      <hr />
+      <section>
+        <ul>
+          <li>
+            <a href="">
+              <img src="./src/Google__G__Logo 1.png" alt="" />구글 계정으로
+              로그인
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="./src/facebook.png" alt="" />페이스북 계정으로 로그인
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="./src/naver-logo.png" alt="" />네이버 계정으로 로그인
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="./src/message-circle.png" alt="" />카카오톡 계정으로
+              로그인
+            </a>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </body>
+</html>
