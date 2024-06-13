@@ -1,0 +1,130 @@
+body {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 0 10px 0 10px;
+  margin-bottom: 10px;
+}
+
+header {
+  font-size: 2rem;
+  font-weight: 600;
+  border-bottom: 1px solid;
+}
+
+main {
+  margin-top: 30%;
+}
+
+.line-container {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 1rem;
+}
+.line-container::before,
+.line-container::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #000;
+}
+.line-container::before {
+  margin-right: 10px;
+}
+.line-container::after {
+  margin-left: 10px;
+}
+
+.fullSection {
+  display: flex;
+  flex-flow: wrap column;
+  align-items: center;
+}
+
+.loginSection {
+  width: 400px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.loginBtn {
+  width: 300px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border: 1px solid #000;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  position: relative;
+  border-radius: 4px;
+}
+
+.loginBtn img {
+  height: 30px;
+  margin-right: auto;
+}
+
+.loginBtn span {
+  flex: 1;
+  text-align: center;
+  padding-right: 30px;
+}
+
+.text1 {
+  color: black;
+}
+
+.text2 {
+  color: white;
+}
+
+/* 로그인 버튼 배경 색 변경 용 */
+a[href="#email"] {
+  background-color: #a3a3a3;
+}
+a[href="#email"] img {
+  background-color: white;
+  width: 30px;
+}
+
+a[href="#naver"] {
+  background-color: rgb(57, 195, 57);
+}
+a[href="#naver"] img {
+  background-color: white;
+}
+
+a[href="#facebook"] {
+  background-color: rgb(71, 71, 244);
+}
+
+a[href="#line"] {
+  background-color: rgb(60, 210, 60);
+}
+
+a[href="#signup"] {
+  color: black;
+  font-weight: 600;
+}
+
+.keepLoginedSection {
+  width: 400px;
+  margin-left: 60px;
+  display: flex;
+  justify-content: start;
+  margin-bottom: 20px;
+}

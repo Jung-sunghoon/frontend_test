@@ -1,0 +1,59 @@
+@font-face {
+  font-family: "Ownglyph_ryurue-Rg";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2405-2@1.0/Ownglyph_ryurue-Rg.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: "Ownglyph_ryurue-Rg";
+  text-align: center;
+  margin: 0;
+}
+
+.slogan {
+  font-size: 50px;
+}
+
+.strong {
+  color: blue;
+}
+
+.text1,
+.text2,
+.text3,
+.text4,
+.text5 {
+  font-size: 50px;
+}
+
+.text1 {
+  position: absolute;
+  top: 20px;
+  left: 660px;
+}
+
+.text2 {
+  position: absolute;
+  top: 70px;
+  left: 660px;
+}
+
+.text3 {
+  position: absolute;
+  top: 120px;
+  left: 660px;
+}
+
+.text4 {
+  position: absolute;
+  top: 170px;
+  left: 660px;
+}
+
+.text5 {
+  position: absolute;
+  top: 220px;
+  left: 660px;
+}
