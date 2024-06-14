@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>asd</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: orange;
+        margin-bottom: 30px;
+      }
+
+      .box1,
+      .box3 {
+        padding: 20px;
+        border: 5px solid black;
+      }
+
+      .box1 {
+        box-sizing: border-box;
+        padding: 10px;
+      }
+
+      .box3 {
+        box-sizing: content-box;
+      }
+
+      .box4 {
+        width: 600px;
+        background-color: aqua;
+      }
+
+      p {
+        width: 400px;
+        background-color: blue;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4">
+      <p>margin을 사용한 배치</p>
+    </div>
+  </body>
+</html>
