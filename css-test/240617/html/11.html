@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>asd</title>
+    <style>
+      /* aspect-ratio를 활용한 방법 */
+      /* img {
+        width: 300px;
+        aspect-ratio: 2 / 1;
+        object-fit: cover;
+      } */
+
+      /* padding %를 활용한 방법 */
+      .thumbnail {
+        height: 0;
+        padding-top: 50%;
+        position: relative;
+      }
+
+      .thumbnail img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="thumbnail">
+      <img src="../src/imgimg.jpg" alt="스케이트보드 타는 사람 사진" />
+    </div>
+  </body>
+</html>

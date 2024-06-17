@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>asd</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background-image: url(../../240613/src/slogan.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+
+      div::before {
+        content: "";
+        display: block;
+        background-image: url(../../240613/src/slogan.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 문맥상 필요 X -->
+    <div></div>
+    <!-- 문맥상 필요 O -->
+    <img src="../../240613/src/slogan.jpg" alt="" />
+  </body>
+</html>
