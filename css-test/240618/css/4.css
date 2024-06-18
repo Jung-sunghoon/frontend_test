@@ -1,0 +1,68 @@
+body {
+  margin: 20px;
+}
+
+a {
+  color: #767676;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  max-width: 314px;
+}
+
+.loginSection {
+  max-width: 350px;
+  height: 140px;
+  border-radius: 4px;
+  border: 1px solid black;
+  padding: 30px 0 30px 30px;
+}
+
+button {
+  background-color: #711bff;
+  color: white;
+  height: 40px;
+  width: 318px;
+  text-align: center;
+  border-radius: 4px;
+  border-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+}
+button > span {
+  font-size: 12px;
+}
+
+.icon-lock,
+.icon-user {
+  width: 16px;
+  height: 16px;
+}
+
+.weniv-logo {
+  height: 18px;
+  width: 64px;
+}
+
+.textWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.seperator::after {
+  content: "";
+  border-right: 0.1rem solid #767676;
+  margin: 0 5px;
+  display: block;
+  height: 16px;
+}

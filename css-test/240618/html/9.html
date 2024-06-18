@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>asd</title>
+    <style>
+      .container {
+        height: 200px;
+        display: flex;
+        background-color: #eee;
+        padding: 10px;
+        gap: 30px;
+        flex-direction: column;
+      }
+
+      .item {
+        background-color: rosybrown;
+        border: 1px solid black;
+        flex-grow: 1;
+      }
+
+      .item2 {
+        flex-grow: 2;
+
+        flex-basis: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item item1">item A</div>
+      <div class="item item2">item B</div>
+      <div class="item item3">item C</div>
+      <div class="item item4">item D</div>
+    </div>
+  </body>
+</html>

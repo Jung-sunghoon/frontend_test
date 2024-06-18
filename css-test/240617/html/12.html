@@ -5,27 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>asd</title>
     <style>
-      .ratio {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        width: fit-content;
-      }
-
       .ratio img {
-        width: 300px;
+        width: 30%;
         aspect-ratio: 1/1;
         object-fit: cover;
       }
 
-      .paddingTest {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        width: 900px;
+      .thumb {
+        display: inline-block;
+        width: 30%;
       }
 
-      .thumb {
+      .thumb div {
         height: 0;
         padding-top: 50%;
         position: relative;
@@ -51,7 +42,7 @@
       <img src="../src/weniv-wade.png" alt="위니브 나무늘보 캐릭터 웨이드" />
     </div>
 
-    <div class="paddingTest">
+    <div>
       <div class="thumb">
         <div>
           <img src="../src/weniv-binky.png" alt="위니브 토끼 캐릭터 빙키" />
