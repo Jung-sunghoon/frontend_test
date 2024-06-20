@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>asd</title>
     <style>
-      body {
+      /* body {
         text-align: center;
       }
 
@@ -19,37 +19,71 @@
       }
 
       section {
-        /* float: left; */
-        /* width: 70%; */
+        float: left;
+        width: 70%;
         flex-grow: 1;
         height: 400px;
         background-color: skyblue;
       }
 
       aside {
-        /* width: 30%; */
-        /* float: left; */
+        width: 30%;
+        float: left;
         flex-basis: 200px;
-        /* flex-grow: 1; */
+        flex-grow: 1;
         background-color: salmon;
         height: 400px;
       }
 
       footer {
-        /* clear: both; */
+        clear: both;
         height: 100px;
+        background-color: red;
+      } */
+
+      .container {
+        display: grid;
+        grid-template-areas:
+          "header header header header"
+          "section section section aside"
+          "section section section aside"
+          "footer footer footer footer";
+        gap: 10px;
+        width: 600px;
+        height: 600px;
+      }
+
+      header {
+        grid-area: header;
+        background-color: aqua;
+      }
+
+      section {
+        grid-area: section;
+        background-color: skyblue;
+      }
+
+      aside {
+        grid-area: aside;
+        background-color: salmon;
+      }
+
+      footer {
+        grid-area: footer;
         background-color: red;
       }
     </style>
   </head>
   <body>
-    <header>header</header>
-    <div class="wrapper">
+    <div class="container">
+      <header>header</header>
+      <!-- <div class="wrapper"> -->
       <section>
         <article>section > article</article>
       </section>
       <aside>aside</aside>
+      <!-- </div> -->
+      <footer>footer</footer>
     </div>
-    <footer>footer</footer>
   </body>
 </html>
