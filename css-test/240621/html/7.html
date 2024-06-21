@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>animation</title>
+    <style>
+      @keyframes move-licat {
+        to {
+          background-position: right 0;
+        }
+      }
+
+      @keyframes move {
+        to {
+          transform: translateX(300px);
+        }
+      }
+
+      .licat {
+        width: 168px;
+        height: 200px;
+        background: url(../src/keyframes-licat.png) no-repeat 0 0 / auto 100%;
+        animation: move-licat 0.8s infinite steps(6);
+      }
+
+      .new {
+        width: 168px;
+        height: 200px;
+        background-color: red;
+        animation: move 2s infinite alternate;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="licat"></div>
+    <div class="new"></div>
+  </body>
+</html>
