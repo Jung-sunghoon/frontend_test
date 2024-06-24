@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>carousel-test</title>
+    <style>
+      :root {
+        --translateZ: calc((400px * 7) / 2 / 3.14);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      #carousel {
+        height: 100vh;
+        perspective: 800px;
+      }
+
+      @keyframes rotate {
+        to {
+          transform: translate(-50%, -50%) rotateY(1turn);
+        }
+      }
+
+      .itemList {
+        position: relative;
+        width: 400px;
+        height: 400px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transform-style: preserve-3d;
+        animation: rotate 60s infinite linear;
+      }
+
+      .itemList li {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+      }
+
+      li img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .itemList li:nth-child(1) {
+        transform: rotateY(0) translateZ(var(--translateZ));
+      }
+
+      .itemList li:nth-child(2) {
+        transform: rotateY(calc(360deg / 7)) translateZ(var(--translateZ));
+      }
+
+      .itemList li:nth-child(3) {
+        transform: rotateY(calc((360deg / 7) * 2)) translateZ(var(--translateZ));
+      }
+
+      .itemList li:nth-child(4) {
+        transform: rotateY(calc((360deg / 7) * 3)) translateZ(var(--translateZ));
+      }
+
+      .itemList li:nth-child(5) {
+        transform: rotateY(calc((360deg / 7) * 4)) translateZ(var(--translateZ));
+      }
+
+      .itemList li:nth-child(6) {
+        transform: rotateY(calc((360deg / 7) * 5)) translateZ(var(--translateZ));
+      }
+
+      .itemList li:nth-child(7) {
+        transform: rotateY(calc((360deg / 7) * 6)) translateZ(var(--translateZ));
+      }
+    </style>
+  </head>
+  <body>
+    <div id="carousel">
+      <ul class="itemList">
+        <li>
+          <img src="../src/agumon.png" alt="" />
+        </li>
+        <li>
+          <img src="../src/gabumon.png" alt="" />
+        </li>
+        <li>
+          <img src="../src/guilmon.png" alt="" />
+        </li>
+        <li>
+          <img src="../src/renamon.png" alt="" />
+        </li>
+        <li>
+          <img src="../src/tentomon.png" alt="" />
+        </li>
+        <li>
+          <img src="../src/terriermon.png" alt="" />
+        </li>
+        <li>
+          <img src="../src/v-mon.png" alt="" />
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

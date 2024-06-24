@@ -17,6 +17,22 @@
         }
       }
 
+      @keyframes ani {
+        from {
+          background-position: 0px, 0px;
+        }
+        to {
+          background-position: -3730px, 0;
+        }
+      }
+      .building1 {
+        width: 110px;
+        height: 180px;
+        background: url(../src/building1.png) no-repeat;
+        animation: ani 5s infinite steps(33);
+        animation-fill-mode: forwards;
+      }
+
       .licat {
         width: 168px;
         height: 200px;
@@ -35,5 +51,6 @@
   <body>
     <div class="licat"></div>
     <div class="new"></div>
+    <div class="building1"></div>
   </body>
 </html>

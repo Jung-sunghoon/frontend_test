@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>asd</title>
+    <style>
+      .clock {
+        width: 400px;
+        height: 400px;
+        background-color: royalblue;
+        border-radius: 100px;
+        position: relative;
+      }
+
+      .sec,
+      .min,
+      .hour {
+        width: 10px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform-origin: top center;
+      }
+
+      .sec {
+        background-color: black;
+        height: 120px;
+        animation: sec 60s infinite linear;
+      }
+
+      .min {
+        background-color: green;
+        height: 150px;
+        animation: min 3600s infinite linear;
+      }
+
+      .hour {
+        background-color: red;
+        height: 100px;
+        animation: hour 43200s infinite linear;
+      }
+
+      @keyframes sec {
+        from {
+          transform: rotate(-180deg);
+        }
+        to {
+          transform: rotate(180deg);
+        }
+      }
+
+      @keyframes min {
+        from {
+          transform: rotate(-180deg);
+        }
+        to {
+          transform: rotate(180deg);
+        }
+      }
+
+      @keyframes hour {
+        from {
+          transform: rotate(-180deg);
+        }
+        to {
+          transform: rotate(180deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="clock">
+      <div class="sec"></div>
+      <div class="min"></div>
+      <div class="hour"></div>
+    </div>
+  </body>
+</html>

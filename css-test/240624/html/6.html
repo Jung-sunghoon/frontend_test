@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>asd</title>
+    <style>
+      @media print {
+        abbr::after {
+          content: " (" attr(title) ")";
+        }
+      }
+
+      body {
+        background-color: lightblue;
+        padding: 20px;
+      }
+
+      /* 화면의 최대 너비가 600px일 때 */
+      @media (max-width: 600px) {
+        body {
+          background-color: lightcoral;
+        }
+      }
+
+      /* 화면의 최소 너비가 601px이고 최대 너비가 1200px일 때 */
+      @media (min-width: 601px) and (max-width: 1200px) {
+        body {
+          background-color: lightgreen;
+        }
+      }
+
+      /* 화면의 최소 너비가 1201px일 때 */
+      @media (min-width: 1201px) {
+        body {
+          background-color: lightyellow;
+        }
+      }
+
+      /* 화면의 너비가 360px일 때 */
+      @media (width: 360px) {
+        body {
+          background-color: yellowgreen;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <abbr title="world wide web consortium">w3c</abbr>
+  </body>
+</html>
