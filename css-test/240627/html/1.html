@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>asd</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <img
+      srcset="../src/gary1.png, ../src/gary2.png 2x, ../src/gary3.png 3x" 
+      src="../src/gary1.png"
+      alt="개발자 개구리 개리"
+    /> -->
+    <img
+      srcset="
+        ../src/gary1.png  500w,
+        ../src/gary2.png 1000w,
+        ../src/gary3.png 2000w
+      "
+      sizes="(max-width: 360px) 200px,(max-width: 720px) 400px 600px"
+      src="../src/gary1.png"
+      alt="개발자 개구리 개리"
+    />
+  </body>
+</html>
