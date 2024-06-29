@@ -4,16 +4,25 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  background-color: #f0e68c; /* 밝은 노란색 배경 */
+  background-color: #f0e68c;
+}
+
+.container {
+  position: relative;
 }
 
 .potato {
   width: 250px;
   height: 200px;
-  background-color: #d2b48c; /* 감자 색상 */
-  border: 5px solid #8b4513; /* 윤곽선 추가 */
-  border-radius: 50% 45% 55% 50% / 60% 55% 45% 50%; /* 불규칙한 모양 */
+  background-color: #d2b48c;
+  border: 5px solid #8b4513;
+  border-radius: 50% 45% 55% 50% / 60% 55% 45% 50%;
   position: relative;
+  transition: transform 0.5s ease-in-out;
+}
+
+.potato:hover {
+  animation: rotate 1s linear infinite;
 }
 
 .eyes {
@@ -31,8 +40,9 @@ body {
   height: 30px;
   background-color: white;
   border-radius: 50%;
-  border: 2px solid #8b4513; /* 눈 윤곽선 */
+  border: 2px solid #8b4513;
   position: relative;
+  overflow: hidden;
 }
 
 .eye::before {
@@ -85,6 +95,14 @@ body {
   border: 3px solid #8b4513;
   border-radius: 10px;
   position: relative;
+}
+
+.arm {
+  animation: armSwing 1s ease-in-out infinite alternate;
+}
+
+.leg {
+  animation: legSwing 1s ease-in-out infinite alternate;
 }
 
 .arm.left {
@@ -140,4 +158,42 @@ body {
 .spot:nth-child(3) {
   bottom: 20%;
   left: 20%;
+}
+
+.speechBubble {
+  position: absolute;
+  top: -150px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  padding: 10px;
+  background-color: white;
+  border: 2px solid #8b4513;
+  border-radius: 10px;
+  text-align: center;
+  display: block;
+  transition: 0.3s ease;
+}
+
+.speechBubble::after {
+  content: attr(data-text);
+}
+
+.potato:hover + .speechBubble::after {
+  content: attr(data-hover-text);
+}
+
+@keyframes armSwing {
+  0% { transform: rotate(-240deg); }
+  100% { transform: rotate(-120deg); }
+}
+
+@keyframes legSwing {
+  0% { transform: rotate(-20deg); }
+  100% { transform: rotate(20deg); }
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
