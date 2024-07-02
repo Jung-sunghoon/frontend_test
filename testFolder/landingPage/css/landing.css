@@ -1,0 +1,348 @@
+body {
+  position: relative;
+  background-color: #f2e9d8;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+
+strong {
+  font-weight: 700;
+  color: #d97652;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+/* 헤더 스타일 */
+#header {
+  width: 100%;
+  height: 49.875rem;
+  overflow: hidden;
+}
+
+/* 네비게이션 바 스타일 */
+.headerNav {
+  display: flex;
+  padding: 1.6rem 20rem;
+  justify-content: space-between;
+  position: sticky;
+  align-items: center;
+  top: 0;
+  z-index: 1000;
+}
+
+.headerMenuList {
+  display: flex;
+  align-items: center;
+}
+
+.mobileHeaderMenuList {
+  display: none;
+}
+
+.headerMenuList li:nth-child(1),
+.headerMenuList li:nth-child(2) {
+  margin-right: 1.8rem;
+}
+
+.headerMenuList li:nth-child(3) {
+  margin-right: 2.5rem;
+}
+
+.downloadBtn {
+  background-color: #d97652;
+  border-radius: 40px;
+  padding: 1rem 1.8rem;
+  color: white;
+  border: none;
+}
+
+/* 헤더 텍스트 및 이미지 섹션 스타일 */
+.headerTextAndImg {
+  padding: 2rem 20rem 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+}
+
+.headerText {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-top: 10rem;
+  padding-right: 8rem;
+}
+
+.headerText h2,
+.headerText p {
+  margin-bottom: 2.5rem;
+}
+
+/* 메인 스타일 */
+#main {
+  padding: 5rem 20rem;
+  background-color: white;
+}
+
+/* 첫번째 이미지 섹션 */
+.imgSection1 {
+  display: flex;
+}
+
+.imgSection1 img {
+  min-width: 41.25rem;
+  height: 24.375rem;
+  object-fit: cover;
+  object-position: center 35%;
+  border-radius: 30px;
+  filter: drop-shadow(10px 10px 30px rgba(0, 0, 0, 0.25));
+}
+
+.imgSection1Text {
+  padding: 5.75rem 0 5.75rem 6.875rem;
+}
+
+.imgSection1Text h2 {
+  margin-bottom: 1.875rem;
+}
+
+/* 두번째 이미지 섹션 */
+.imgSection2 {
+  margin-top: 7.5rem;
+  position: relative;
+}
+
+.imgSection2Text1 {
+  text-align: center;
+}
+
+.imgSection2Text1 h2 {
+  margin-bottom: 2.5rem;
+  color: #d97652;
+}
+
+.imgSection2Text1 p {
+  padding: 0 10rem;
+}
+
+.imgSection2ImgContainer {
+  margin-top: 5.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.imgSection2ImgContainer img {
+  width: 23.625rem;
+  border-radius: 30px;
+  filter: drop-shadow(10px 10px 30px rgba(0, 0, 0, 0.25));
+}
+
+.imgSection2Text2 {
+  margin: 5.625rem 0 12.25rem 0;
+  padding: 0 10.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.imgSection2Text2 p {
+  margin-right: 3.25rem;
+  word-break: keep-all;
+}
+
+.downloadBtnWrapper {
+  display: flex;
+  justify-content: flex-end;
+  width: 50%;
+}
+
+/* 플로팅 박스 스타일 */
+.floatingBox {
+  position: absolute;
+  background-color: #263140;
+  left: 50%;
+  transform: translateX(-50%) translateY(-5%);
+  width: 95%;
+  padding: 3.125rem 3.625rem;
+  color: white;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+/* 텍스트 섹션 스타일 */
+.floatTextSection {
+  flex-grow: 1;
+  margin-right: 9rem;
+}
+
+.floatTextSection h3 {
+  margin-bottom: 1rem;
+}
+
+/* 인풋 박스 스타일 */
+.floatInputSection {
+  flex-grow: 1;
+}
+
+.floatInputSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 65%;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.floatInput {
+  width: 100%;
+  padding: 1rem 10rem 1rem 3rem;
+  background: url("../images/mail.svg") no-repeat 10px center; /* 아이콘 위치 */
+  background-color: white;
+  text-align: left;
+  border-radius: 60px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+.inputWrapper > .downloadBtn {
+  position: absolute;
+  right: 0.5rem;
+  height: calc(100% - 0.5rem);
+  padding: 0 1.5rem;
+}
+
+/* 고양이 백그라운드 이미지 */
+.catBackImg {
+  width: 100%;
+  height: 30rem;
+  object-fit: cover;
+  vertical-align: middle;
+  opacity: 0.6;
+  object-position: center 40%;
+}
+
+/* 푸터 스타일 */
+#footer {
+  background-color: white;
+  padding: 1.6rem 20rem;
+}
+
+.footerMenuSection {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footerMenuList {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footerMenuList li {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: #f29d52;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerMenuList li:not(:last-child) {
+  margin-right: 1.25rem;
+}
+
+@media (max-width: 768px) {
+  #header,
+  #main,
+  #footer {
+    padding: 0 2rem;
+  }
+
+  .headerNav {
+    padding: 1.25rem 1.5rem;
+  }
+
+  #header {
+    height: 49rem;
+    width: auto;
+  }
+
+  .headerText h2,
+  .headerText p {
+    text-align: center;
+  }
+
+  .headerImgWrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .headerImgWrapper img {
+    width: 12.5rem;
+  }
+
+  .headerMenuList {
+    display: none;
+  }
+
+  .headerTextAndImg {
+    padding: 0;
+  }
+
+  .headerTextAndImg,
+  .imgSection1,
+  .imgSection2Text2 {
+    flex-flow: column wrap;
+  }
+
+  .headerText {
+    align-items: center;
+    padding: 5rem 5rem 0;
+  }
+
+  .imgSection1 {
+    padding: 2.5rem 2rem 0;
+  }
+
+  .imgSection1Text {
+    padding: 2.5rem 0 0 0;
+  }
+
+  .imgSection2Text2 {
+    padding: 0 2rem;
+  }
+
+  .imgSection2Text2 p,
+  .floatTextSection {
+    margin: 0;
+  }
+
+  .downloadBtnWrapper {
+    width: 100%;
+    margin: 5rem 0 20rem;
+  }
+
+  .floatingBox {
+    flex-flow: column wrap;
+    width: 80%;
+  }
+}

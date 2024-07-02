@@ -8,16 +8,158 @@
     <title>랜딩페이지</title>
   </head>
   <body>
-    <header>
-      <div></div>
-      <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li>Support</li>
-        <li>Download</li>
+    <nav class="headerNav">
+      <div class="logo">
+        <img src="./images/logo.png" alt="호두 로고 png 이미지" />
+      </div>
+      <ul class="headerMenuList">
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#">About</a>
+        </li>
+        <li>
+          <a href="#">Support</a>
+        </li>
+        <li>
+          <button class="downloadBtn">Download</button>
+        </li>
       </ul>
+      <div class="mobileHeaderMenuList">
+        <ul class="headerMenuList">
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">About</a>
+          </li>
+          <li>
+            <a href="#">Support</a>
+          </li>
+          <li>
+            <button class="downloadBtn">Download</button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <header id="header">
+      <section class="headerTextAndImg">
+        <div class="headerText">
+          <h2>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
+          </h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
+            assumenda porro aspernatur dolore maxime! Quo voluptates ut dolor
+            minima! Tempora, facilis earum? Pariatur, perspiciatis hic veniam
+            eum sunt officia nemo.
+          </p>
+          <button class="downloadBtn">Download</button>
+        </div>
+        <div class="headerImgWrapper">
+          <img src="./images/box-cat.png" alt="박스 쓰고 있는 고양이" />
+        </div>
+      </section>
     </header>
-    <main></main>
-    <footer></footer>
+    <main id="main">
+      <section class="imgSection1">
+        <img src="./images/img_4.jpg" alt="누워있는 고양이" />
+        <div class="imgSection1Text">
+          <h2>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
+          </h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
+            molestias provident, hic dolores eius quas ipsam ipsa, blanditiis
+            obcaecati quia neque quasi voluptatibus rerum esse dolorem
+            repellendus? Numquam, cum voluptas.
+          </p>
+        </div>
+      </section>
+      <section class="imgSection2">
+        <div class="imgSection2Text1">
+          <h2>dummy text of the printing and dummy</h2>
+          <p>
+            Lorem <strong>dummy text</strong> dolor sit amet consectetur
+            adipisicing elit. Quia alias natus harum tenetur ipsum? Distinctio
+            veniam nemo voluptatem vitae, accusamus optio et assumenda magni
+            consequuntur voluptates eveniet dolor temporibus quis.
+          </p>
+        </div>
+        <div class="imgSection2ImgContainer">
+          <img src="./images/img_1.jpg" alt="고양이 사진1" />
+          <img src="./images/img_2.jpg" alt="고양이 사진2" />
+          <img src="./images/img_3.jpg" alt="고양이 사진3" />
+        </div>
+        <div class="imgSection2Text2">
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto
+            labore fugit eaque nisi aut consectetur suscipit, porro repudiandae
+            explicabo! Voluptatibus atque eveniet iusto cumque ducimus non nam
+            iste adipisci inventore! Lorem, ipsum dolor sit amet consectetur
+            adipisicing elit. Pariatur ipsum obcaecati suscipit nostrum
+            architecto molestias, commodi illum ex tempore id corporis voluptas
+            fugit, enim eligendi quos sapiente dolores, cum voluptatum!
+          </p>
+          <div class="downloadBtnWrapper">
+            <button class="downloadBtn">Learn More</button>
+          </div>
+        </div>
+        <div class="floatingBox">
+          <section class="floatTextSection">
+            <h3>Subscribe to our Blog post</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Laudantium fugiat nulla eligendi, repudiandae velit rerum esse.
+            </p>
+          </section>
+          <section class="floatInputSection">
+            <form class="inputWrapper">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="floatInput"
+                placeholder="Enter your e-mail address"
+              />
+              <button type="submit" class="downloadBtn">Subscribe</button>
+            </form>
+          </section>
+        </div>
+      </section>
+    </main>
+    <div>
+      <img src="./images/img_5.jpg" alt="고양이 사진" class="catBackImg" />
+    </div>
+    <footer id="footer">
+      <section class="footerMenuSection">
+        <div class="footerImg">
+          <img src="./images/logo.svg" alt="호두 로고 svg 이미지" />
+        </div>
+        <ul class="footerMenuList">
+          <li>
+            <a href="#">
+              <img src="./images/blog.svg" alt="블로그 이미지" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./images/instagram.svg" alt="인스타그램 이미지" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./images/facebook.svg" alt="페이스북 이미지" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./images/youtube.svg" alt=" 유튜브 이미지" />
+            </a>
+          </li>
+        </ul>
+      </section>
+    </footer>
   </body>
 </html>
