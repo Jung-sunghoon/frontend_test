@@ -5,12 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/landing.css" />
+    <script src="./js/landing.js" async></script>
     <title>랜딩페이지</title>
   </head>
   <body>
     <nav class="headerNav">
       <div class="logo">
-        <img src="./images/logo.png" alt="호두 로고 png 이미지" />
+        <img
+          src="./images/logo.png"
+          alt="호두 로고 png 이미지"
+          class="headerMenuImg"
+        />
       </div>
       <ul class="headerMenuList">
         <li>
@@ -23,11 +28,18 @@
           <a href="#">Support</a>
         </li>
         <li>
-          <button class="downloadBtn">Download</button>
+          <button type="button" class="downloadBtn">Download</button>
         </li>
       </ul>
-      <div class="mobileHeaderMenuList">
-        <ul class="headerMenuList">
+      <img
+        src="./images/menu.svg"
+        alt="모바일 메뉴 이미지"
+        class="mobileHeaderMenuImg"
+      />
+    </nav>
+    <div class="mobileMenuContainer">
+      <div class="mobileHeaderMenu">
+        <ul class="mobileHeaderMenuList">
           <li>
             <a href="#">Home</a>
           </li>
@@ -38,11 +50,11 @@
             <a href="#">Support</a>
           </li>
           <li>
-            <button class="downloadBtn">Download</button>
+            <button type="button" class="downloadBtn">Download</button>
           </li>
         </ul>
       </div>
-    </nav>
+    </div>
     <header id="header">
       <section class="headerTextAndImg">
         <div class="headerText">
@@ -55,7 +67,7 @@
             minima! Tempora, facilis earum? Pariatur, perspiciatis hic veniam
             eum sunt officia nemo.
           </p>
-          <button class="downloadBtn">Download</button>
+          <button type="button" class="downloadBtn">Download</button>
         </div>
         <div class="headerImgWrapper">
           <img src="./images/box-cat.png" alt="박스 쓰고 있는 고양이" />
@@ -88,9 +100,41 @@
           </p>
         </div>
         <div class="imgSection2ImgContainer">
-          <img src="./images/img_1.jpg" alt="고양이 사진1" />
-          <img src="./images/img_2.jpg" alt="고양이 사진2" />
-          <img src="./images/img_3.jpg" alt="고양이 사진3" />
+          <div class="imgSection2ImgCarousel">
+            <div class="imgSection2ImgWrapper">
+              <div class="carSlide">
+                <img
+                  src="./images/img_1.jpg"
+                  alt="고양이 사진1"
+                  class="catImg"
+                />
+              </div>
+              <div class="carSlide">
+                <img
+                  src="./images/img_2.jpg"
+                  alt="고양이 사진2"
+                  class="catImg"
+                />
+              </div>
+              <div class="carSlide">
+                <img
+                  src="./images/img_3.jpg"
+                  alt="고양이 사진3"
+                  class="catImg"
+                />
+              </div>
+            </div>
+          </div>
+          <img
+            src="./images/arrow-left.svg"
+            alt="왼쪽 화살표"
+            class="carouselBtnLeft"
+          />
+          <img
+            src="./images/arrow-right.svg"
+            alt="오른쪽 화살표"
+            class="carouselBtnRight"
+          />
         </div>
         <div class="imgSection2Text2">
           <p>
@@ -103,63 +147,112 @@
             fugit, enim eligendi quos sapiente dolores, cum voluptatum!
           </p>
           <div class="downloadBtnWrapper">
-            <button class="downloadBtn">Learn More</button>
+            <button type="button" class="downloadBtn">Learn More</button>
           </div>
-        </div>
-        <div class="floatingBox">
-          <section class="floatTextSection">
-            <h3>Subscribe to our Blog post</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Laudantium fugiat nulla eligendi, repudiandae velit rerum esse.
-            </p>
-          </section>
-          <section class="floatInputSection">
-            <form class="inputWrapper">
-              <input
-                type="email"
-                name="email"
-                id="email"
-                class="floatInput"
-                placeholder="Enter your e-mail address"
-              />
-              <button type="submit" class="downloadBtn">Subscribe</button>
-            </form>
-          </section>
         </div>
       </section>
     </main>
+    <div class="floatingBox">
+      <section class="floatTextSection">
+        <h3>Subscribe to our Blog post</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
+          fugiat nulla eligendi, repudiandae velit rerum esse. Lorem ipsum dolor
+          sit amet consectetur adipisicing elit. Reiciendis neque ut dolores ab
+          adipisci aut dolore non expedita, dolor placeat modi molestiae
+          perspiciatis enim repudiandae quo autem cumque odio distinctio!
+        </p>
+      </section>
+      <section class="floatInputSection">
+        <form class="inputWrapper">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="floatInput"
+            placeholder="Enter your e-mail address"
+            required
+          />
+          <button type="submit" class="downloadBtn subBtn">Subscribe</button>
+        </form>
+      </section>
+    </div>
     <div>
       <img src="./images/img_5.jpg" alt="고양이 사진" class="catBackImg" />
     </div>
     <footer id="footer">
-      <section class="footerMenuSection">
-        <div class="footerImg">
-          <img src="./images/logo.svg" alt="호두 로고 svg 이미지" />
+      <section class="footerMenuContainer">
+        <div class="footerMenuSection">
+          <div class="footerImg">
+            <img src="./images/logo.svg" alt="호두 로고 svg 이미지" />
+          </div>
+          <ul class="footerMenuList">
+            <li>
+              <a href="#">
+                <img src="./images/blog.svg" alt="블로그 이미지" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./images/instagram.svg" alt="인스타그램 이미지" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./images/facebook.svg" alt="페이스북 이미지" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./images/youtube.svg" alt=" 유튜브 이미지" />
+              </a>
+            </li>
+          </ul>
         </div>
-        <ul class="footerMenuList">
+        <ul class="footerMobileMenuList">
           <li>
-            <a href="#">
-              <img src="./images/blog.svg" alt="블로그 이미지" />
-            </a>
+            <a href="#"> About </a>
           </li>
           <li>
-            <a href="#">
-              <img src="./images/instagram.svg" alt="인스타그램 이미지" />
-            </a>
+            <a href="#"> Blog </a>
           </li>
           <li>
-            <a href="#">
-              <img src="./images/facebook.svg" alt="페이스북 이미지" />
-            </a>
+            <a href="#"> Support </a>
           </li>
           <li>
-            <a href="#">
-              <img src="./images/youtube.svg" alt=" 유튜브 이미지" />
-            </a>
+            <a href="#"> Terms of Use </a>
           </li>
         </ul>
       </section>
     </footer>
+    <div class="topBtn">
+      <img src="./images/top-btn.svg" alt="탑 버튼" />
+    </div>
+    <section class="subModal">
+      <form class="modalPopup">
+        <div class="modalImg">
+          <img src="./images/cat-subscribe.png" alt="구독 고양이 사진" />
+        </div>
+        <div class="modalText">
+          <h3><strong>Thank you!</strong></h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias,
+            deleniti voluptas? Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Exercitationem beatae repellat eum in nulla
+            numquam, nemo adipisci earum praesentium culpa minus quo eaque
+            doloribus autem reprehenderit rem at vitae architecto. Lorem, ipsum
+            dolor sit amet consectetur adipisicing elit. Laborum culpa nam quia
+            cupiditate vel rem, aperiam impedit distinctio quam excepturi?
+            Necessitatibus corrupti omnis harum deserunt unde blanditiis quia
+            nulla eveniet.
+          </p>
+        </div>
+        <div class="modalBtn">
+          <button type="submit" class="closeBtn downloadBtn">
+            OK! I Love HODU
+          </button>
+        </div>
+      </form>
+    </section>
   </body>
 </html>
