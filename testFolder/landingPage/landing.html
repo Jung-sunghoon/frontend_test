@@ -9,6 +9,8 @@
     <title>랜딩페이지</title>
   </head>
   <body>
+    <h1 class="sr-only">랜딩페이지 프로젝트</h1>
+    <!-- 네비게이션바 -->
     <nav class="headerNav">
       <div class="logo">
         <img
@@ -37,8 +39,16 @@
         class="mobileHeaderMenuImg"
       />
     </nav>
+    <!-- 모바일 네비게이션 바 -->
     <div class="mobileMenuContainer">
       <div class="mobileHeaderMenu">
+        <div class="backImgWrapper">
+          <img
+            src="./images/arrow-right.svg"
+            alt="뒤로 가기 이미지"
+            class="closeMenuImg"
+          />
+        </div>
         <ul class="mobileHeaderMenuList">
           <li>
             <a href="#">Home</a>
@@ -55,12 +65,14 @@
         </ul>
       </div>
     </div>
+    <!-- 헤더 코드 -->
     <header id="header">
       <section class="headerTextAndImg">
+        <h2 class="sr-only">헤더 텍스트와 이미지</h2>
         <div class="headerText">
-          <h2>
+          <p class="titleText">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
-          </h2>
+          </p>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
             assumenda porro aspernatur dolore maxime! Quo voluptates ut dolor
@@ -74,13 +86,15 @@
         </div>
       </section>
     </header>
+    <!-- 메인 코드 -->
     <main id="main">
       <section class="imgSection1">
+        <h2 class="sr-only">누워있는 고양이 섹션</h2>
         <img src="./images/img_4.jpg" alt="누워있는 고양이" />
         <div class="imgSection1Text">
-          <h2>
+          <p class="titleText">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
-          </h2>
+          </p>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
             molestias provident, hic dolores eius quas ipsam ipsa, blanditiis
@@ -90,8 +104,9 @@
         </div>
       </section>
       <section class="imgSection2">
+        <h2 class="sr-only">이미지 캐러셀이 들어건 이미지 + 텍스트 섹션</h2>
         <div class="imgSection2Text1">
-          <h2>dummy text of the printing and dummy</h2>
+          <p class="titleText">dummy text of the printing and dummy</p>
           <p>
             Lorem <strong>dummy text</strong> dolor sit amet consectetur
             adipisicing elit. Quia alias natus harum tenetur ipsum? Distinctio
@@ -99,6 +114,7 @@
             consequuntur voluptates eveniet dolor temporibus quis.
           </p>
         </div>
+        <!-- 캐러셀 코드 -->
         <div class="imgSection2ImgContainer">
           <div class="imgSection2ImgCarousel">
             <div class="imgSection2ImgWrapper">
@@ -152,9 +168,10 @@
         </div>
       </section>
     </main>
+    <!-- float box 코드 -->
     <div class="floatingBox">
       <section class="floatTextSection">
-        <h3>Subscribe to our Blog post</h3>
+        <h2 class="titleText">Subscribe to our Blog post</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
           fugiat nulla eligendi, repudiandae velit rerum esse. Lorem ipsum dolor
@@ -163,7 +180,7 @@
           perspiciatis enim repudiandae quo autem cumque odio distinctio!
         </p>
       </section>
-      <section class="floatInputSection">
+      <div class="floatInputSection">
         <form class="inputWrapper">
           <input
             type="email"
@@ -175,13 +192,14 @@
           />
           <button type="submit" class="downloadBtn subBtn">Subscribe</button>
         </form>
-      </section>
+      </div>
     </div>
     <div>
       <img src="./images/img_5.jpg" alt="고양이 사진" class="catBackImg" />
     </div>
     <footer id="footer">
       <section class="footerMenuContainer">
+        <h2 class="sr-only">footer 메뉴</h2>
         <div class="footerMenuSection">
           <div class="footerImg">
             <img src="./images/logo.svg" alt="호두 로고 svg 이미지" />
@@ -229,12 +247,13 @@
       <img src="./images/top-btn.svg" alt="탑 버튼" />
     </div>
     <section class="subModal">
+      <h2 class="sr-only">구독 모달 섹션</h2>
       <form class="modalPopup">
         <div class="modalImg">
           <img src="./images/cat-subscribe.png" alt="구독 고양이 사진" />
         </div>
         <div class="modalText">
-          <h3><strong>Thank you!</strong></h3>
+          <p class="titleText"><strong>Thank you!</strong></p>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias,
             deleniti voluptas? Lorem ipsum dolor sit amet consectetur

@@ -4,16 +4,6 @@ body {
   line-height: 1.3;
 }
 
-h2 {
-  font-size: 3rem;
-  font-weight: 700;
-}
-
-h3 {
-  font-size: 2.25rem;
-  font-weight: 700;
-}
-
 strong {
   font-weight: 700;
   color: #d97652;
@@ -21,6 +11,29 @@ strong {
 
 button:hover {
   cursor: pointer;
+}
+
+.titleText {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.modalText > .titleText,
+.floatTextSection > .titleText {
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  white-space: nowrap;
 }
 
 /* 헤더 스타일 */
@@ -387,11 +400,7 @@ button:hover {
 }
 
 @media (max-width: 768px) {
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  h3 {
+  .titleText {
     font-size: 1.5rem;
   }
 
@@ -413,29 +422,54 @@ button:hover {
     width: 50%;
   }
 
+  /* 모바일 메뉴 스타일 */
   .mobileMenuContainer {
     position: fixed;
+    visibility: hidden;
     width: 100%;
     height: 100%;
     top: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.5);
     z-index: 2000;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.5);
   }
 
   .mobileHeaderMenu {
     display: block;
     background-color: #263140;
     height: 100%;
-    width: 70%;
+    width: 0;
     margin-left: auto;
+    transition: all 0.5s ease;
   }
 
-  .headerMenuList {
+  .mobileMenuContainer.open {
+    visibility: visible;
+  }
+
+  .mobileHeaderMenu.open {
+    width: 70%;
+  }
+
+  .mobileHeaderMenuList {
+    display: flex;
+    flex-flow: column wrap;
+    padding: 2rem;
+    height: 20%;
+    justify-content: space-between;
+  }
+
+  .mobileHeaderMenuList a {
+    color: white;
   }
 
   .mobileHeaderMenuImg {
     display: block;
+  }
+
+  .backImgWrapper {
+    padding: 1rem;
   }
 
   /* 헤더 스타일 */
@@ -494,9 +528,6 @@ button:hover {
   .catImg {
     width: 16.25rem;
   }
-  .catImg:not(:last-child) {
-    margin-right: 2rem;
-  }
 
   .imgSection2Text2 {
     margin: 5.625rem 0 0 0;
@@ -518,14 +549,17 @@ button:hover {
   }
 
   /* 캐러셀 스타일 */
-  .imgSection2ImgCarousel {
-    overflow: hidden;
-  }
-
   .imgSection2ImgWrapper {
+    display: flex; /* 이미지들을 가로로 나열하기 위해 */
+    transition: transform 0.5s ease; /* transform 속성에 대한 transition 효과 추가 */
   }
 
   .carSlide {
+    flex: 1 1 100%; /* 이미지를 가로로 하나씩 나열하기 위해 */
+  }
+
+  .carSlide:not(:last-child) {
+    margin-right: 2rem;
   }
 
   .carouselBtnLeft,
@@ -597,7 +631,7 @@ button:hover {
 
   .catBackImg {
     height: 20rem;
-    object-position: center top;
+    object-position: center 40%;
   }
 
   /* 푸터 스타일 */
@@ -648,5 +682,11 @@ button:hover {
   /* 모달 스타일 */
   .modalPopup {
     width: 40%;
+  }
+}
+
+@media (max-width: 390px) {
+  .catBackImg {
+    object-position: center top;
   }
 }
