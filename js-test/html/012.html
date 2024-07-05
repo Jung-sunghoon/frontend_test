@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>asd</title>
+  </head>
+  <body>
+    <script>
+      // 스코프
+      // 접근해서 사용할 수 있는 범위
+
+      // 전역 스코프: 어디서든 접근 가능
+      var a = 10;
+      let b = 20;
+      const c = 30;
+
+      function func1() {
+        var fA = 40;
+        let fB = 50;
+        const fC = 60;
+        console.log("functuib:", a, b, c);
+        console.log("function:", fA, fB, fC);
+      }
+      func1();
+      console.log("---out---");
+      // console.log("function:", fA);
+      // console.log("function:", fB);
+      // console.log("function:", fC);
+
+      {
+        var bA = 70;
+        let bB = 80;
+        const bC = 90;
+        console.log("block", a, b, c);
+        console.log("block", bA, bB, bC);
+      }
+      console.log("---out---");
+      console.log("block", bA);
+      // console.log("block", bB);
+      // console.log("block", bC);
+    </script>
+  </body>
+</html>
