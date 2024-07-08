@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>asd</title>
+  </head>
+  <body>
+    <script>
+      const str = "Hello world, Hello weniv";
+
+      console.log(str.indexOf("Hello"));
+      console.log(str.indexOf("weniv"));
+      console.log(str.indexOf("licat"));
+      console.log(str.indexOf("Hello", 5));
+
+      console.log("---lastIndexOf---");
+      console.log(str.lastIndexOf("Hello"));
+      console.log(str.lastIndexOf("weniv"));
+      console.log(str.lastIndexOf("Hello", 12));
+
+      console.log("---includes---");
+      console.log(str.includes("Hello"));
+      console.log(str.includes("hello"));
+
+      console.log("---match---");
+      console.log(str.match(/[A-Z]/g)); // 대문자
+      console.log(str.match(/[0-9]/g)); // 숫자
+      console.log(str.match(/H/));
+
+      // 문자열의 일부를 가져오기
+      console.log("---substring---");
+      const str2 = "Hello Weniv!";
+      console.log(str2.substring(0, 5));
+      console.log(str2.substring(6, str2.length - 1));
+      console.log(str2.substring(6));
+      console.log(str2.substring());
+      console.log(str2.substring(-2, 5));
+      console.log(str2.substring(2, "hello"));
+
+      console.log("---slice---");
+      console.log(str2.slice(0, 5));
+      console.log(str2.slice(6, -1));
+      console.log(str2.slice(2, "hello"));
+
+      console.log("---substr---");
+      console.log(str2.substr(6, 5));
+      console.log(str2.substr(6));
+      console.log(str2.substr(6, 0));
+      console.log(str2.substr(6, -2));
+
+      // 문자열 쪼개기
+      const phone = "010-1234-6789";
+      console.log("---split---");
+      console.log(phone.split("-"));
+      console.log(phone.split(""));
+      console.log(phone.split("", 2));
+
+      // 문자열 바꾸기
+      console.log("---replace---");
+      const str3 = "Hello world! Hello weniv!";
+      console.log(str3.replace("Hello", "Hi"));
+      console.log(str3.replace(/Hello/g, "Hi"));
+
+      console.log(str3.replaceAll("Hello", "Hi"));
+
+      // 대소문자 변경
+      console.log("---lower/upper---");
+      const search = "JavaScript"; // javascript
+      console.log(search.toUpperCase());
+      console.log(search.toLowerCase());
+
+      // 문자열 반복
+      // console.log("*" * 10)
+      console.log("---repeat---");
+      console.log("*".repeat(5));
+
+      // 문자열 시작과 끝
+      console.log("---trim---");
+      console.log("        hello licat".trim());
+
+      console.log("---padStart/padEnd---");
+      console.log("3".padStart(2, "0"));
+      console.log("12".padStart(2, "0"));
+      console.log("12".padEnd(5, "-"));
+    </script>
+  </body>
+</html>
