@@ -1,0 +1,41 @@
+body {
+  text-align: center;
+  width: 500px;
+  margin: 5% auto;
+}
+
+ul {
+  display: flex;
+  flex-flow: column wrap;
+  border: 1px solid black;
+  margin-top: 10px;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+li:not(:last-child) {
+  border-bottom: 1px solid black;
+}
+
+li > div {
+  display: flex;
+  align-items: center;
+}
+
+.itemInput {
+  width: 400px;
+}
+
+.complete {
+  background-color: gray;
+}
+
+.complete label {
+  text-decoration: line-through;
+  opacity: 0.2;
+}

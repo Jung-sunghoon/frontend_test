@@ -26,7 +26,11 @@
     listText.forEach((p, index) => {
       p.addEventListener("click", function (e) {
         e.stopPropagation();
-        alert(e.target.textContent);
+        const btn = p.querySelector("button");
+        const textWithoutButton = e.target.textContent
+          .replace(btn.textContent, "")
+          .trim();
+        alert(textWithoutButton);
       });
       delBtn[index].addEventListener("click", function (e) {
         e.preventDefault();
