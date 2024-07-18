@@ -1,17 +1,12 @@
 const selectBtn = document.querySelector(".btn-select");
-const btnList = document.querySelectorAll(".list-member button");
+const btnList = document.querySelector(".list-member");
 
 selectBtn.addEventListener("click", function () {
-  if (selectBtn.classList.contains("on")) {
-    selectBtn.classList.remove("on");
-  } else {
-    selectBtn.classList.add("on");
-  }
+  selectBtn.classList.toggle("on");
 });
 
-btnList.forEach((btn) => {
-  btn.addEventListener("click", (event) => {
-    const btnValue = event.target.textContent;
-    selectBtn.textContent = btnValue;
-  });
+btnList.addEventListener("click", function (event) {
+  if (event.target.nodeName == "BUTTON") {
+    selectBtn.textContent = event.target.textContent;
+  }
 });
