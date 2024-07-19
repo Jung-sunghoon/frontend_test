@@ -25,7 +25,6 @@
 
     listText.forEach((p, index) => {
       p.addEventListener("click", function (e) {
-        e.stopPropagation();
         const btn = p.querySelector("button");
         const textWithoutButton = e.target.textContent
           .replace(btn.textContent, "")
@@ -35,8 +34,7 @@
       delBtn[index].addEventListener("click", function (e) {
         e.preventDefault();
         e.stopPropagation();
-        confirm("삭제하시겠습니까?");
-        confirm ? e.target.parentNode.remove() : false;
+        confirm("삭제하시겠습니까?") ? e.target.parentNode.remove() : false;
       });
     });
   </script>
