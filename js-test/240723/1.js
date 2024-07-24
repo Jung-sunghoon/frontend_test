@@ -68,34 +68,32 @@
 //   });
 
 const req = fetch("https://test.api.weniv.co.kr/mall");
+function render(data) {
+  const myUl = document.createElement("ul");
+  const myLi = document.createElement("li");
+  const productName = document.createElement("p");
+  const price = document.createElement("p");
+  const img = document.createElement("img");
+
+  myLi.id = data.id;
+  productName.textContent = data.productName;
+  price.textContent = data.price;
+  img.src = "https://test.api.weniv.co.kr/" + data.thumbnailImg;
+
+  myLi.append(productName);
+  myLi.append(price);
+  myLi.append(img);
+
+  myUl.appendChild(myLi);
+  document.body.appendChild(myUl);
+}
+
 req
   .then((res) => {
-    console.log(res.json);
     return res.json();
   })
-  .then((data) => {
-    console.log(data);
-    const myOl = document.createElement("ol");
-
-    data.forEach((element) => {
-      const myLi = document.createElement("li");
-      const productName = document.createElement("p");
-      const price = document.createElement("p");
-      const img = document.createElement("img");
-
-      myLi.id = element.id;
-      productName.textContent = element.productName;
-      price.textContent = element.price;
-      img.src = "https://test.api.weniv.co.kr/" + element.thumbnailImg;
-
-      myLi.append(productName);
-      myLi.append(price);
-      myLi.append(img);
-
-      myOl.appendChild(myLi);
-    });
-    document.body.appendChild(myOl);
-    return data;
+  .then((json) => {
+    json.forEach(render);
   })
   .catch((error) => {
     console.error(error);
