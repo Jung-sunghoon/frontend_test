@@ -367,18 +367,18 @@ solution(cookies);
 
 ```js
 function solution(data){
-    let result = 0; // 80점 이상인 학생 수
-    data.forEach(v => {
-        let mean = 0; // 각 학생의 평균
-        v.forEach(i => {
-            mean += i;
-        });
-        mean /= v.length;
-        if (mean >= 80) {
-            result++;
-        }
+  let result = 0; // 80점 이상인 학생 수
+  data.forEach(v => {
+    let mean = 0; // 각 학생의 평균
+    v.forEach(i => {
+      mean += i;
     });
-    return result;
+    mean /= v.length;
+    if (mean >= 80) {
+      result++;
+    }
+  });
+  return result;
 }
 
 solution([[92, 85, 97], [30, 21, 60], [90, 99, 98], [0, 0, 0], [81, 80, 88]])
@@ -386,15 +386,15 @@ solution([[92, 85, 97], [30, 21, 60], [90, 99, 98], [0, 0, 0], [81, 80, 88]])
 ////////////////
 
 function solution(data){
-    let mean = 0; // 각 학생의 평균
-    let result = 0; // 80점 이상인 학생 수
-    data.forEach(v => {
-        mean = v.reduce((acc, cur) => acc + cur) / v.length;
-        if (mean >= 80) {
-            result++;
-        }
-    });
-    return result;
+  let mean = 0; // 각 학생의 평균
+  let result = 0; // 80점 이상인 학생 수
+  data.forEach(v => {
+    mean = v.reduce((acc, cur) => acc + cur) / v.length;
+      if (mean >= 80) {
+        result++;
+      }
+  });
+  return result;
 }
 
 solution([[92, 85, 97], [30, 21, 60], [90, 99, 98], [0, 0, 0], [81, 80, 88]])
