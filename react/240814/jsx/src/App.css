@@ -1,0 +1,10 @@
+.myDiv {
+  color: teal;
+  background-color: black;
+  font-size: 100px;
+}
+
+.monthDate,
+.time {
+  color: white;
+}
