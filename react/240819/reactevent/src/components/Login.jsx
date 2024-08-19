@@ -18,9 +18,13 @@ function Login({ userInfo, isLogin }) {
       return;
     }
 
-    console.log(userInfo, "user");
-
-    if (id === userInfo.idUser && pw === userInfo.pwUser) {
+    if (id !== userInfo.idUser) {
+      alert("아이디가 일치하지 않습니다.");
+      return;
+    } else if (pw !== userInfo.pwUser) {
+      alert("비밀번호가 일치하지 않습니다.");
+      return;
+    } else {
       isLogin(true);
     }
   };
