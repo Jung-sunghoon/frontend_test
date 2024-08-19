@@ -1,0 +1,40 @@
+h1 {
+  text-align: center;
+  margin: 20px 0;
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+.main {
+  margin: auto;
+  width: 400px;
+}
+
+.button-list {
+  display: flex;
+  flex-flow: column wrap;
+  width: 300px;
+  margin: auto;
+  gap: 10px;
+}
+
+.button-list button {
+  border: none;
+  height: 40px;
+  cursor: pointer;
+}
+
+.button-list button:hover {
+  background-color: aqua;
+}
+
+.display {
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 300px;
+  margin: 10px auto;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
