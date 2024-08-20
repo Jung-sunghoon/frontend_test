@@ -21,11 +21,13 @@ function Login({ userInfo, isLogin }) {
     if (id !== userInfo.idUser) {
       alert("아이디가 일치하지 않습니다.");
       return;
-    } else if (pw !== userInfo.pwUser) {
+    } else if (Number(pw) !== userInfo.pwUser) {
       alert("비밀번호가 일치하지 않습니다.");
       return;
-    } else {
+    } else if (id === userInfo.idUser && Number(pw) === userInfo.pwUser) {
       isLogin(true);
+    } else {
+      return;
     }
   };
 

@@ -1,0 +1,9 @@
+.user-detail {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.active {
+  height: 80px;
+}
