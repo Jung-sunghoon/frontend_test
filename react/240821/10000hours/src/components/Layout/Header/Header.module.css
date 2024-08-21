@@ -1,0 +1,39 @@
+/* 헤더 스타일 */
+#header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20rem;
+}
+
+.headerImgContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16rem;
+  height: 100%;
+  background: url(../../../../public/img/clock.png) no-repeat center;
+  background-size: contain;
+}
+
+.headerImg {
+  height: auto;
+  width: 35rem;
+}
+
+/* 미디어 쿼리 */
+@media (max-width: 360px) {
+  /* 헤더 스타일 */
+  #header {
+    height: 10rem;
+  }
+
+  .headerImgContainer {
+    width: 8rem;
+    background-size: contain;
+  }
+
+  .headerImg {
+    width: 18rem;
+  }
+}

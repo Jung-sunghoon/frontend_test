@@ -1,0 +1,57 @@
+/* 모달 스타일 */
+.cheerModal {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  align-content: center;
+}
+
+.cheerModal.on {
+  display: block;
+}
+
+.modalPopup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 40rem;
+  width: 40rem;
+  background-color: white;
+  border-radius: 2rem;
+  padding: 5rem;
+  align-content: center;
+}
+
+.cheerText1,
+.cheerText2 {
+  font-weight: 700;
+  font-family: "OTEnjoystoriesBA";
+  line-height: 1.3;
+  color: #5b2386;
+}
+
+.cheerText1 {
+  font-size: 6rem;
+}
+.cheerText1::after {
+  content: "♥♥♥";
+}
+
+.cheerText2 {
+  font-size: 2.5rem;
+}
+
+.closeBtn {
+  border-radius: 56px;
+  color: #5b2386;
+  background-color: #fcee21;
+  font-size: 1.3rem;
+  padding: 1.3rem 3rem;
+  margin-top: 3rem;
+  text-align: center;
+}
