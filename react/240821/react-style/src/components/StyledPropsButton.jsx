@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyledButton = styled.button`
+const StyledPropsButton = styled.button`
   background-color: ${(props) => {
     switch (props.color) {
       case "danger":
@@ -21,4 +21,4 @@ const StyledButton = styled.button`
   }
 `;
 
-export { StyledButton };
+export { StyledPropsButton };
