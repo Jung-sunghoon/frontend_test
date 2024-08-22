@@ -6,8 +6,7 @@ import styles from "./Main.module.css";
 
 const Main = ({ setOpen }) => {
   const [subject, setSubject] = useState("");
-  const [days, setDays] = useState(0);
-  const [resultVisible, setResultVisible] = useState(false);
+  const [days, setDays] = useState();
 
   const handleFormSubmit = (subjectValue, timeValue) => {
     const hours = parseFloat(timeValue);
@@ -16,7 +15,6 @@ const Main = ({ setOpen }) => {
 
     setSubject(subjectValue);
     setDays(daytimes);
-    setResultVisible(true);
   };
 
   const handleModalOpen = (e) => {
@@ -28,7 +26,7 @@ const Main = ({ setOpen }) => {
     <main id={styles.main}>
       <MainContent />
       <Form onSubmit={handleFormSubmit} />
-      {resultVisible && <Result subject={subject} days={days} />}
+      <Result subject={subject} days={days} />
       <section className={styles.mainBtnWrapper}>
         <button className={styles.modalBtn} onClick={handleModalOpen}>
           훈련하러 가기 GO!GO!
