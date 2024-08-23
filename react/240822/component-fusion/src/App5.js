@@ -24,7 +24,7 @@ const App5 = () => {
           inventore, aliquam esse non nam consectetur minima atque consequuntur
           voluptates, eum quia.
         </ProductDescription>
-        <ProductPrice price={1000} currencyCode="KRW" />
+        <ProductPrice price={1000} currencyCode="GBP" />
       </ContCard>
     </>
   );
