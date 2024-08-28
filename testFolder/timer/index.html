@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>타이머 실습 프로젝트</title>
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <script src="./index.js" defer></script>
+  </head>
+  <body>
+    <div id="root">
+      <header>
+        <img src="./imgs/Logo.svg" alt="위니브" class="logoImg" />
+      </header>
+      <main>
+        <section class="timerSection">
+          <h2>TIMER</h2>
+          <div class="seperator"></div>
+          <div class="timer">
+            <div class="timerBox hour">
+              <label>HRS</label>
+              <input
+                type="number"
+                min="00"
+                max="23"
+                value="00"
+                class="timerInput"
+              />
+            </div>
+            <img class="timerSeperator" src="./imgs/dot.svg" alt="timer-dot" />
+            <div class="timerBox minuate">
+              <label>MIN</label>
+              <input
+                type="number"
+                min="00"
+                max="59"
+                value="00"
+                class="timerInput"
+              />
+            </div>
+            <img class="timerSeperator" src="./imgs/dot.svg" alt="timer-dot" />
+            <div class="timerBox second">
+              <label>SEC</label>
+              <input
+                type="number"
+                min="00"
+                max="59"
+                value="00"
+                class="timerInput"
+              />
+            </div>
+          </div>
+          <div>
+            <button type="button" class="btn startOrStopBtn">START</button>
+            <button type="button" class="btn resetBtn">RESET</button>
+          </div>
+        </section>
+      </main>
+      <footer></footer>
+    </div>
+  </body>
+</html>

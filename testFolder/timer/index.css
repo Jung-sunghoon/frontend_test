@@ -1,0 +1,86 @@
+#root {
+  background: radial-gradient(
+    96.74% 276.79% at 3.59% 5.28%,
+    #f0f4ff 0%,
+    #a5b6ee 100%
+  );
+  height: 100vh;
+}
+
+header {
+  margin: auto;
+  width: 244px;
+}
+
+.logoImg {
+  margin: 72px 0 60px;
+  height: 48px;
+}
+
+.timerSection {
+  background: linear-gradient(144.07deg, #5572bb 2.13%, #374b7c 102.97%);
+  width: 400px;
+  height: 360px;
+  margin: auto;
+  border-radius: 16px;
+  box-shadow: 20px 20px 60px 10px #374b7c66;
+  padding-top: 48px;
+}
+
+.timerSection h2 {
+  width: 73px;
+  height: 29px;
+  font-weight: 700;
+  font-size: 24px;
+  color: white;
+  margin: auto;
+}
+
+.seperator {
+  background-color: #3d538a;
+  width: 312px;
+  height: 1px;
+  margin: 23px auto 33px;
+}
+
+.timer {
+  display: flex;
+  width: 284px;
+  height: 98px;
+  justify-content: space-between;
+  margin: auto;
+  align-items: center;
+}
+
+.timerBox {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.timer label {
+  color: #a5b6ee;
+}
+
+.timer input {
+  width: 80px;
+  height: 80px;
+  font-size: 40px;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  background: linear-gradient(314.28deg, #304577 0%, #4c65a0 83%);
+  border: 1px solid #354971;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.timerSeperator {
+  width: 6px;
+  height: 26px;
+}
