@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import useInput from "./Hook/useInput";
+import useInput from "./Hook/useInput.js";
 
 function SomethingComponent() {
   // const [value, setValue] = useState('');
