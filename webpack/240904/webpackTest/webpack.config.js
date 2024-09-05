@@ -1,9 +1,12 @@
 const path = require("path");
 const webpack = require("webpack");
 const childProcess = require("child_process");
+require("dotenv").config();
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
-  mode: "development",
+  mode: process.env.NODE_ENV === "development" ? "development" : "production",
 
   entry: {
     main: path.resolve("./src/app.js"),
@@ -49,5 +52,13 @@ module.exports = {
     Commit Date : ${new Date().toLocaleString()}
 `,
     }),
+    new webpack.DefinePlugin({
+      dev: JSON.stringify(process.env.DEV_API),
+      pro: JSON.stringify(process.env.PRO_API),
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/index.html",
+    }),
+    new CleanWebpackPlugin(),
   ],
 };
